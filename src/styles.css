@@ -1,0 +1,337 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    max-width: 1400px;
+    display: block;
+    margin: auto;
+    min-height: 100vh;
+    background: #fff;
+    font-family: sans-serif;
+    align-content: center;
+}
+
+header {
+    background-color: #DB7093;
+    color: #fff;
+    padding: 10px;
+    align-content: center;
+}
+.navbar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+    background: #DB7093;
+}.link-group{
+    list-style: none;
+    display: flex;
+}
+.link a{
+    color: #fff;
+    opacity: 0.5;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 30px;
+    margin: 0 20px;
+    line-height: 80px;
+    transition: .5s;
+    font-size: 20px;
+}
+.link a:hover, .link.active a{
+    opacity: 1;
+}
+.home-section{
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0;
+    opacity: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+.text-container {
+    position: absolute;
+    top: 50%; 
+    left: 35%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1; 
+}
+.hero-heading{
+    color: #DB7093;
+    font-size: 120px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+.home-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 92.5vh;
+    width: 50%;
+    object-fit: cover;
+    opacity: 0.7;
+}
+
+.home-section.active,
+.project-section.active,
+.about-section.active,
+.contact-section.active{
+    position: relative;
+    opacity: 1;
+    z-index: 8;
+}
+
+main {
+    padding: 20px;
+    margin: 50px;
+    background: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.project-section{
+    width: 100%;
+    padding: 50px 150px 100px;
+    position: fixed;
+    top: 0;
+    transition: 1s;
+    opacity: 0;
+}
+.project-heading{
+    font-size: 100px;
+    background: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    text-shadow:0 0 25px #f1dda8;
+    margin-bottom: 50px;
+    color: #DB7093;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 8px transparent;
+}
+.project-container{
+    display: flex;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 100px;
+}
+.project-card{
+    height: 400px;
+    position: relative;
+}
+.project-img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    transition: .5s;
+}
+.project-content{
+    position: relative;
+    padding: 50px 150px 100px;
+    color: #000;
+    transition: .5s;
+    opacity: 0;
+    
+}
+.project-title{
+    font-size: 50px;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 300;
+}
+.project-info{
+    margin: 40px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+.project-btn-grp{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+.project-btn{
+    height: 40px;
+    text-transform: capitalize;
+    font-size: 18px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.project-btn.live{
+    background: none;
+    border: 2px solid #fff;
+    color: #000;
+}
+.project-card:hover .project-img{
+    filter: blur(20px);
+}
+.project-card:hover .project-content{
+    opacity: 1;
+}
+.btn-link {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.skill-section{
+    position: relative;
+    margin: 100px 0;
+}
+
+.heading{
+    text-align: center;
+    font-size: 60px;
+    color: #000;
+    font-weight: 300;
+    margin-bottom: 100px;
+}
+
+.skills-container{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    text-transform: lowercase;
+    color: #000;
+}
+
+.skill-card{
+    position: relative;
+}
+
+.skill-img{
+    display: block;
+    margin: auto;
+    height: 200px;
+}
+
+.skill-name{
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.skill-info{
+    text-align: center;
+    opacity: 0.5;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.skill-level{
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 50%;
+    border: 10px solid;
+}
+
+.skill-card:nth-child(1) .skill-level{
+    background: #dea5e44d;
+    border-color: #ed4fff;
+    color: #ed4fff;
+}
+
+.skill-card:nth-child(2) .skill-level{
+    background: #4fa0ff28;
+    border-color: #4fa0ff;
+    color: #4fa0ff;
+}
+
+.skill-card:nth-child(3) .skill-level{
+    background: #ff4f9828;
+    border-color: #ff4fa1;
+    color: #ff4fa1;
+}
+.contact-section{
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    transition: 1s;
+    padding: 150px 150px;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+}
+.contact-form input, .contact-form textarea{
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #000;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #000;
+    padding: 5px 10px;
+}
+
+::placeholder{
+    color: #000;
+}
+
+#msg{
+    height: 280px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+.form-submit-btn{
+    background: #DB7093;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 15px 40px;
+    display: block;
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.map{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+footer {
+    background-color: #DB7093;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
